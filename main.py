@@ -17,13 +17,13 @@ api = Api(auth)
 
 def main():
     #Set schedule for when to set background
-    schedule.every().monday.at("2:00").do(job)
-    schedule.every().tuesday.at("2:00").do(job)
-    schedule.every().wednesday.at("2:00").do(job)
-    schedule.every().thursday.at("2:00").do(job)
-    schedule.every().friday.at("2:00").do(job)
-    schedule.every().saturday.at("2:00").do(job)
-    schedule.every().sunday.at("2:00").do(job)
+    schedule.every().monday.at("02:00").do(job)
+    schedule.every().tuesday.at("02:00").do(job)
+    schedule.every().wednesday.at("02:00").do(job)
+    schedule.every().thursday.at("02:00").do(job)
+    schedule.every().friday.at("02:00").do(job)
+    schedule.every().saturday.at("02:00").do(job)
+    schedule.every().sunday.at("02:00").do(job)
 
     while True:
         schedule.run_pending()
