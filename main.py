@@ -4,6 +4,7 @@ from unsplash.api import Api
 from unsplash.auth import Auth
 import unsplash
 import requests
+import ctypes
 
 client_id = "c0efab2e6baaafa10d16d0266dc28b9658f7668d5b2047c0d32a5994af91d26e"
 client_secret = "73e6f202e8bbffdc4b3e6d9ef0646244e09b4d7867d30db659110b5454d51bbe"
@@ -17,6 +18,7 @@ def main():
 
     link = getRandomPic()
     downloadPic(link)
+    setDesktopBackground()
 
 
 def getRandomPic():
@@ -42,7 +44,8 @@ def downloadPic(photoLink):
             handle.write(block)
 
 def setDesktopBackground():
-    
+    SPI_SETDESKWALLPAPER = 20
+    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER,0,"S:\Workspace\Coding\desktopBackgroundRandomizer\\background.jpg",0)
 
 if __name__ == "__main__":
     main()
