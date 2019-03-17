@@ -5,6 +5,7 @@ from unsplash.auth import Auth
 import unsplash
 import requests
 import schedule
+import urllib3
 
 #Setup for interfacing with unsplash API
 client_id = "c0efab2e6baaafa10d16d0266dc28b9658f7668d5b2047c0d32a5994af91d26e"
