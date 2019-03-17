@@ -41,5 +41,8 @@ def downloadPic(photoLink):
 
             handle.write(block)
 
+def setDesktopBackground():
+    
+
 if __name__ == "__main__":
     main()
