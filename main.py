@@ -15,6 +15,11 @@ code = ""
 auth = Auth(client_id, client_secret, redirect_uri, code=code)
 api = Api(auth)
 
+def job():
+    link = getRandomPic()
+    downloadPic(link)
+    setDesktopBackground()
+
 def main():
     #Set schedule for when to set background
     schedule.every().monday.at("02:00").do(job)
@@ -29,10 +34,7 @@ def main():
         schedule.run_pending()
         time.sleep(1)
 
-def job():
-    link = getRandomPic()
-    downloadPic(link)
-    setDesktopBackground()
+
 
 
 def getRandomPic():
