@@ -37,7 +37,6 @@ def main():
 
 
 
-
 def getRandomPic():
     #Ensure we grab a 1920 by 1080 image from the wallpapers collection
     kwargs = {'w':1920,'h':1080,'query':'wallpapers'}
@@ -66,7 +65,7 @@ def downloadPic(photoLink):
 
 def setDesktopBackground():
     SPI_SETDESKWALLPAPER = 20
-    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER,0,"S:\Workspace\Coding\desktopBackgroundRandomizer\\background.jpg",0)
+    ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER,0,"S:\\Workspace\\Coding\\desktopBackgroundRandomizer\\dist\\background.jpg",0)
 
 if __name__ == "__main__":
     main()
